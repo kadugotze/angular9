@@ -1,0 +1,28 @@
+<a routerLink="/products/" class="back" >
+    <i class="material-icons" >replay</i></a>
+<mat-card>
+    <mat-card-title>Excluir produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput appWhite placeholder="Bebida" 
+                [value] = "product.name" name="name" disabled> 
+        </mat-form-field>
+         
+        <mat-form-field >
+             <!--  [(ngModel)] = model.intancia -->
+                <!-- com essa sintaxe consigo pegar o valor do input do formulario -->             
+            <input matInput appWhite placeholder="Preço R$" 
+           
+                [value] = "product.price" name="price" disabled> 
+        </mat-form-field>
+    </form>
+    <!-- implementação futura do pop up de exclusão -->
+    <button mat-raised-button (click)="deleteProduct()"  color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()" class="cancel">
+        Cancelar
+    </button>
+
+</mat-card> 

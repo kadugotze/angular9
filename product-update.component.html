@@ -1,0 +1,27 @@
+<a routerLink="/products/" class="back" >
+    <i class="material-icons" >replay</i></a>
+<mat-card>
+    <mat-card-title>Alterar de Bebida</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput appWhite placeholder="Bebida" 
+                [(ngModel)] = "product.name" name="name" > 
+        </mat-form-field>
+         
+        <mat-form-field >
+             <!--  [(ngModel)] = model.intancia -->
+                <!-- com essa sintaxe consigo pegar o valor do input do formulario -->             
+            <input matInput appWhite placeholder="(Preço R$)" 
+           
+                [(ngModel)] = "product.price" name=price >
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateProduct()" class="btnSalvar">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+
+</mat-card> 
